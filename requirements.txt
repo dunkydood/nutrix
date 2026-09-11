@@ -1,0 +1,18 @@
+pandas==3.0.5
+numpy==2.5.3
+scipy==1.18.1
+# 1.9.1 is blocked by Windows Smart App Control on the development machine;
+# 1.9.0 is the build it already trusts.
+scikit-learn==1.9.0
+matplotlib==3.11.1
+seaborn==0.13.2
+hmmlearn==0.3.3
+pyarrow==25.0.1
+jupyter==1.1.1
+ipykernel
+nbconvert==7.17.1
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+httpx
+reportlab==5.0.1
+gdown

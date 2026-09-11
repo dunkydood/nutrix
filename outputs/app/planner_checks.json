@@ -1,0 +1,61 @@
+{
+  "kcal_limit": 0.05,
+  "macro_limit": 0.2,
+  "profiles": [
+    {
+      "profile": "Vegetarian woman, 25, maintain",
+      "days": 7,
+      "target_kcal": 2030,
+      "seconds": 8.0,
+      "kcal_gap": 0.005424375827355776,
+      "macro_gap": 0.12815934488809533,
+      "unique_recipes": 28,
+      "meals": 28,
+      "ok": true
+    },
+    {
+      "profile": "Man who likes curries, 25, maintain",
+      "days": 7,
+      "target_kcal": 2301,
+      "seconds": 9.4,
+      "kcal_gap": 0.022032724556996452,
+      "macro_gap": 0.051015004413062615,
+      "unique_recipes": 28,
+      "meals": 28,
+      "ok": true
+    },
+    {
+      "profile": "Vegan woman, 45, weight loss",
+      "days": 3,
+      "target_kcal": 1200,
+      "seconds": 3.1,
+      "kcal_gap": 0.006000000000000005,
+      "macro_gap": 0.10499999999999998,
+      "unique_recipes": 12,
+      "meals": 12,
+      "ok": true
+    },
+    {
+      "profile": "Active man, 22, muscle gain, no preference",
+      "days": 7,
+      "target_kcal": 3580,
+      "seconds": 21.2,
+      "kcal_gap": 0.016679325005019785,
+      "macro_gap": 0.06918436651563964,
+      "unique_recipes": 28,
+      "meals": 28,
+      "ok": true
+    },
+    {
+      "profile": "Active man, 22, muscle gain, rating preference",
+      "days": 7,
+      "target_kcal": 3580,
+      "seconds": 11.8,
+      "kcal_gap": 0.020394765558843675,
+      "macro_gap": 0.13089071052562673,
+      "unique_recipes": 28,
+      "meals": 28,
+      "ok": true
+    }
+  ]
+}

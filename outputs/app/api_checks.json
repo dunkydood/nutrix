@@ -1,0 +1,222 @@
+{
+  "passed": 24,
+  "total": 24,
+  "checks": [
+    {
+      "label": "catalogue metadata",
+      "method": "GET",
+      "path": "/api/meta",
+      "status": 200,
+      "expected": 200,
+      "ms": 48,
+      "ok": true
+    },
+    {
+      "label": "default profile and targets",
+      "method": "GET",
+      "path": "/api/profile",
+      "status": 200,
+      "expected": 200,
+      "ms": 95,
+      "ok": true
+    },
+    {
+      "label": "update profile",
+      "method": "PUT",
+      "path": "/api/profile",
+      "status": 200,
+      "expected": 200,
+      "ms": 31,
+      "ok": true
+    },
+    {
+      "label": "reject unknown diet",
+      "method": "PUT",
+      "path": "/api/profile",
+      "status": 422,
+      "expected": 422,
+      "ms": 34,
+      "ok": true
+    },
+    {
+      "label": "reject out-of-range age",
+      "method": "PUT",
+      "path": "/api/profile",
+      "status": 422,
+      "expected": 422,
+      "ms": 7,
+      "ok": true
+    },
+    {
+      "label": "recommendations without likes",
+      "method": "GET",
+      "path": "/api/recommendations",
+      "status": 200,
+      "expected": 200,
+      "ms": 70,
+      "ok": true
+    },
+    {
+      "label": "search by ingredient",
+      "method": "GET",
+      "path": "/api/recipes",
+      "status": 200,
+      "expected": 200,
+      "ms": 209,
+      "ok": true
+    },
+    {
+      "label": "recipe detail",
+      "method": "GET",
+      "path": "/api/recipes/304604",
+      "status": 200,
+      "expected": 200,
+      "ms": 67,
+      "ok": true
+    },
+    {
+      "label": "missing recipe",
+      "method": "GET",
+      "path": "/api/recipes/999999999",
+      "status": 404,
+      "expected": 404,
+      "ms": 6,
+      "ok": true
+    },
+    {
+      "label": "like a recipe",
+      "method": "POST",
+      "path": "/api/likes/304604",
+      "status": 200,
+      "expected": 200,
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "label": "list likes",
+      "method": "GET",
+      "path": "/api/likes",
+      "status": 200,
+      "expected": 200,
+      "ms": 9,
+      "ok": true
+    },
+    {
+      "label": "recommendations after a like",
+      "method": "GET",
+      "path": "/api/recommendations",
+      "status": 200,
+      "expected": 200,
+      "ms": 214,
+      "ok": true
+    },
+    {
+      "label": "log an eaten meal",
+      "method": "POST",
+      "path": "/api/log",
+      "status": 200,
+      "expected": 200,
+      "ms": 23,
+      "ok": true
+    },
+    {
+      "label": "read today's log",
+      "method": "GET",
+      "path": "/api/log",
+      "status": 200,
+      "expected": 200,
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "label": "change servings",
+      "method": "PATCH",
+      "path": "/api/log/1",
+      "status": 200,
+      "expected": 200,
+      "ms": 23,
+      "ok": true
+    },
+    {
+      "label": "reject invalid slot",
+      "method": "POST",
+      "path": "/api/log",
+      "status": 422,
+      "expected": 422,
+      "ms": 5,
+      "ok": true
+    },
+    {
+      "label": "dashboard",
+      "method": "GET",
+      "path": "/api/dashboard",
+      "status": 200,
+      "expected": 200,
+      "ms": 366,
+      "ok": true
+    },
+    {
+      "label": "generate a 3-day plan",
+      "method": "POST",
+      "path": "/api/plan",
+      "status": 200,
+      "expected": 200,
+      "ms": 4044,
+      "ok": true
+    },
+    {
+      "label": "save plan to calendar",
+      "method": "POST",
+      "path": "/api/plan/save",
+      "status": 200,
+      "expected": 200,
+      "ms": 26,
+      "ok": true
+    },
+    {
+      "label": "30-day progress",
+      "method": "GET",
+      "path": "/api/progress",
+      "status": 200,
+      "expected": 200,
+      "ms": 29,
+      "ok": true
+    },
+    {
+      "label": "analytics",
+      "method": "GET",
+      "path": "/api/analytics",
+      "status": 200,
+      "expected": 200,
+      "ms": 322,
+      "ok": true
+    },
+    {
+      "label": "delete a log entry",
+      "method": "DELETE",
+      "path": "/api/log/1",
+      "status": 200,
+      "expected": 200,
+      "ms": 38,
+      "ok": true
+    },
+    {
+      "label": "unlike",
+      "method": "DELETE",
+      "path": "/api/likes/304604",
+      "status": 200,
+      "expected": 200,
+      "ms": 26,
+      "ok": true
+    },
+    {
+      "label": "clear log",
+      "method": "DELETE",
+      "path": "/api/log",
+      "status": 200,
+      "expected": 200,
+      "ms": 17,
+      "ok": true
+    }
+  ]
+}

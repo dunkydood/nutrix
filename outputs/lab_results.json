@@ -1,0 +1,464 @@
+{
+  "data": {
+    "raw_recipes": 83782,
+    "recipes": 78930,
+    "raw_reviews": 731927,
+    "reviews": 221732,
+    "users": 64643,
+    "nhanes_adults": 3811,
+    "density": 4.345750293880354e-05,
+    "median_reviews_per_recipe": 2.0
+  },
+  "cleaning": {
+    "calories outside 20-2500 per serving": 2047,
+    "stated calories disagree with macros by more than 30%": 3130,
+    "cooking time 0 or over 24 hours": 589
+  },
+  "regression": {
+    "test_r2": 0.1392667814238293,
+    "test_rmse": 681.8156108347166,
+    "cv_r2": 0.1586550143341244,
+    "formula_r2": -0.4683232840830205,
+    "formula_rmse": 890.5196385794424,
+    "formula_bias": 312.65811762778515,
+    "coefficients": {
+      "age": -2.518067881954566,
+      "male": 309.5503989378902,
+      "weight": 1.0246799526403123,
+      "height": 15.362315262647428,
+      "log_met": 5.675096733239798
+    },
+    "intercept": -705.0299511693579
+  },
+  "bayes": {
+    "n_train": 9000,
+    "n_test": 3000,
+    "dessert_share": 0.17966666666666667,
+    "accuracy": 0.8276666666666667,
+    "auc": 0.8885787110086175,
+    "posterior": {
+      "intercept": {
+        "mean": -2.654,
+        "sd": 0.065,
+        "2.5%": -2.781,
+        "97.5%": -2.527
+      },
+      "protein_pct": {
+        "mean": -1.697,
+        "sd": 0.749,
+        "2.5%": -3.165,
+        "97.5%": -0.23
+      },
+      "carbs_pct": {
+        "mean": 0.684,
+        "sd": 1.388,
+        "2.5%": -2.037,
+        "97.5%": 3.404
+      },
+      "fat_pct": {
+        "mean": 0.255,
+        "sd": 1.234,
+        "2.5%": -2.163,
+        "97.5%": 2.674
+      },
+      "sugar_pct": {
+        "mean": 0.422,
+        "sd": 0.049,
+        "2.5%": 0.326,
+        "97.5%": 0.519
+      },
+      "sat_fat_pct": {
+        "mean": 0.746,
+        "sd": 0.042,
+        "2.5%": 0.664,
+        "97.5%": 0.829
+      },
+      "log_sodium_density": {
+        "mean": -0.02,
+        "sd": 0.034,
+        "2.5%": -0.087,
+        "97.5%": 0.046
+      },
+      "log_kcal": {
+        "mean": 0.08,
+        "sd": 0.033,
+        "2.5%": 0.014,
+        "97.5%": 0.145
+      }
+    }
+  },
+  "svm": {
+    "accuracy": 0.7564065855404438,
+    "macro_f1": 0.674961663686615,
+    "per_class_f1": {
+      "beverage": 0.8479020979020979,
+      "breakfast": 0.5481002425222312,
+      "condiment": 0.5281173594132029,
+      "dessert": 0.872794800371402,
+      "main": 0.8210011356687341,
+      "side": 0.6887272727272727,
+      "snack": 0.4180887372013652
+    },
+    "n_test": 13970,
+    "filled": 7266,
+    "unassigned": 1814
+  },
+  "kmeans": {
+    "k": 9,
+    "silhouette": {
+      "4": 0.2065712931764897,
+      "5": 0.20355550680573947,
+      "6": 0.20666541132454744,
+      "7": 0.2176826538664196,
+      "8": 0.22528546139109845,
+      "9": 0.2315704500779665,
+      "10": 0.21542392663183518
+    },
+    "summary": [
+      {
+        "archetype": "Sugary & Light",
+        "share": 0.076,
+        "kcal": 139.0,
+        "protein %": 10.0,
+        "carbs %": 75.0,
+        "fat %": 14.0,
+        "sugar %": 48.0,
+        "sat fat %": 5.0,
+        "sodium mg/100kcal": 138.0
+      },
+      {
+        "archetype": "Rich & Hearty",
+        "share": 0.22,
+        "kcal": 572.0,
+        "protein %": 21.0,
+        "carbs %": 22.0,
+        "fat %": 57.0,
+        "sugar %": 5.0,
+        "sat fat %": 21.0,
+        "sodium mg/100kcal": 131.0
+      },
+      {
+        "archetype": "Starchy",
+        "share": 0.193,
+        "kcal": 337.0,
+        "protein %": 17.0,
+        "carbs %": 59.0,
+        "fat %": 25.0,
+        "sugar %": 8.0,
+        "sat fat %": 7.0,
+        "sodium mg/100kcal": 136.0
+      },
+      {
+        "archetype": "Sugary & Unsalted",
+        "share": 0.037,
+        "kcal": 148.0,
+        "protein %": 3.0,
+        "carbs %": 94.0,
+        "fat %": 3.0,
+        "sugar %": 80.0,
+        "sat fat %": 1.0,
+        "sodium mg/100kcal": 1.0
+      },
+      {
+        "archetype": "High-protein",
+        "share": 0.097,
+        "kcal": 275.0,
+        "protein %": 47.0,
+        "carbs %": 18.0,
+        "fat %": 35.0,
+        "sugar %": 7.0,
+        "sat fat %": 10.0,
+        "sodium mg/100kcal": 168.0
+      },
+      {
+        "archetype": "Buttery",
+        "share": 0.085,
+        "kcal": 262.0,
+        "protein %": 12.0,
+        "carbs %": 15.0,
+        "fat %": 73.0,
+        "sugar %": 7.0,
+        "sat fat %": 41.0,
+        "sodium mg/100kcal": 84.0
+      },
+      {
+        "archetype": "Unsalted & Light",
+        "share": 0.038,
+        "kcal": 162.0,
+        "protein %": 8.0,
+        "carbs %": 45.0,
+        "fat %": 47.0,
+        "sugar %": 16.0,
+        "sat fat %": 11.0,
+        "sodium mg/100kcal": 0.0
+      },
+      {
+        "archetype": "Rich & Light",
+        "share": 0.11,
+        "kcal": 144.0,
+        "protein %": 12.0,
+        "carbs %": 30.0,
+        "fat %": 59.0,
+        "sugar %": 11.0,
+        "sat fat %": 15.0,
+        "sodium mg/100kcal": 159.0
+      },
+      {
+        "archetype": "Sweet",
+        "share": 0.145,
+        "kcal": 357.0,
+        "protein %": 6.0,
+        "carbs %": 52.0,
+        "fat %": 42.0,
+        "sugar %": 33.0,
+        "sat fat %": 21.0,
+        "sodium mg/100kcal": 53.0
+      }
+    ]
+  },
+  "gmm": {
+    "users": 1680,
+    "k": 5,
+    "k_max": 10,
+    "min_bic_k": 9,
+    "confident_share": 0.9511904761904761,
+    "segments": {
+      "segment 1 (182 users)": {
+        "Sugary & Light": 0.4,
+        "Rich & Hearty": -5.3,
+        "Starchy": -3.4,
+        "Sugary & Unsalted": 0.8,
+        "High-protein": 5.0,
+        "Buttery": -2.6,
+        "Unsalted & Light": 3.7,
+        "Rich & Light": -1.3,
+        "Sweet": 2.8
+      },
+      "segment 2 (229 users)": {
+        "Sugary & Light": -1.2,
+        "Rich & Hearty": 6.6,
+        "Starchy": 4.6,
+        "Sugary & Unsalted": -1.3,
+        "High-protein": 3.0,
+        "Buttery": 1.2,
+        "Unsalted & Light": 0.5,
+        "Rich & Light": 0.6,
+        "Sweet": -13.9
+      },
+      "segment 3 (227 users)": {
+        "Sugary & Light": 0.6,
+        "Rich & Hearty": -1.9,
+        "Starchy": 1.3,
+        "Sugary & Unsalted": 0.7,
+        "High-protein": -10.7,
+        "Buttery": -0.6,
+        "Unsalted & Light": 0.5,
+        "Rich & Light": 1.0,
+        "Sweet": 9.1
+      },
+      "segment 4 (437 users)": {
+        "Sugary & Light": -0.5,
+        "Rich & Hearty": 2.4,
+        "Starchy": -1.2,
+        "Sugary & Unsalted": -0.9,
+        "High-protein": 2.8,
+        "Buttery": -0.0,
+        "Unsalted & Light": -3.6,
+        "Rich & Light": -1.7,
+        "Sweet": 2.8
+      },
+      "segment 5 (605 users)": {
+        "Sugary & Light": 0.5,
+        "Rich & Hearty": -2.0,
+        "Starchy": -0.3,
+        "Sugary & Unsalted": 0.7,
+        "High-protein": -0.6,
+        "Buttery": 0.6,
+        "Unsalted & Light": 1.2,
+        "Rich & Light": 1.0,
+        "Sweet": -1.0
+      }
+    }
+  },
+  "pca": {
+    "explained_2": 0.6545141006097388,
+    "loadings": {
+      "PC1": {
+        "protein_pct": -0.224,
+        "carbs_pct": 0.54,
+        "fat_pct": -0.474,
+        "sugar_pct": 0.446,
+        "sat_fat_pct": -0.377,
+        "log_sodium_density": -0.229,
+        "log_kcal": -0.201
+      },
+      "PC2": {
+        "protein_pct": 0.618,
+        "carbs_pct": 0.009,
+        "fat_pct": -0.387,
+        "sugar_pct": -0.242,
+        "sat_fat_pct": -0.455,
+        "log_sodium_density": 0.447,
+        "log_kcal": 0.056
+      },
+      "PC3": {
+        "protein_pct": -0.16,
+        "carbs_pct": 0.168,
+        "fat_pct": -0.093,
+        "sugar_pct": -0.014,
+        "sat_fat_pct": -0.051,
+        "log_sodium_density": -0.044,
+        "log_kcal": 0.966
+      }
+    }
+  },
+  "svd": {
+    "users": 64643,
+    "recipes": 78930,
+    "nnz": 221732,
+    "var_64": 0.2684895694255829,
+    "var_128": 0.3647131323814392
+  },
+  "hmm": {
+    "users": 884,
+    "reviews": 126304,
+    "states": 4,
+    "stay": [
+      0.4457344924205757,
+      0.9977389797501643,
+      0.81312396788077,
+      0.946583532496219
+    ],
+    "emissions": {
+      "state 1": {
+        "Sugary & Light": 0.095,
+        "Rich & Hearty": 0.189,
+        "Starchy": 0.116,
+        "Sugary & Unsalted": 0.134,
+        "High-protein": 0.039,
+        "Buttery": 0.094,
+        "Unsalted & Light": 0.009,
+        "Rich & Light": 0.084,
+        "Sweet": 0.239
+      },
+      "state 2": {
+        "Sugary & Light": 0.053,
+        "Rich & Hearty": 0.261,
+        "Starchy": 0.21,
+        "Sugary & Unsalted": 0.021,
+        "High-protein": 0.129,
+        "Buttery": 0.089,
+        "Unsalted & Light": 0.037,
+        "Rich & Light": 0.128,
+        "Sweet": 0.071
+      },
+      "state 3": {
+        "Sugary & Light": 0.099,
+        "Rich & Hearty": 0.11,
+        "Starchy": 0.246,
+        "Sugary & Unsalted": 0.066,
+        "High-protein": 0.064,
+        "Buttery": 0.071,
+        "Unsalted & Light": 0.091,
+        "Rich & Light": 0.17,
+        "Sweet": 0.082
+      },
+      "state 4": {
+        "Sugary & Light": 0.079,
+        "Rich & Hearty": 0.219,
+        "Starchy": 0.156,
+        "Sugary & Unsalted": 0.027,
+        "High-protein": 0.092,
+        "Buttery": 0.091,
+        "Unsalted & Light": 0.027,
+        "Rich & Light": 0.091,
+        "Sweet": 0.217
+      }
+    }
+  },
+  "cart": {
+    "fidelity_by_depth": {
+      "1": 0.39215760800709487,
+      "2": 0.5628911693905992,
+      "3": 0.6935512479412137,
+      "4": 0.8001773723552514,
+      "5": 0.8249714937286203,
+      "6": 0.8494362092993792,
+      "7": 0.8725706322057519,
+      "8": 0.8830482706195363
+    },
+    "fidelity": 0.8001773723552514
+  },
+  "recommender": {
+    "users": 6453,
+    "cold_targets": 0.2132341546567488,
+    "recall": 0.08104757477142414,
+    "train_rows": 15035,
+    "comparison": {
+      "svd": {
+        "HR@10": 0.005268867193553386,
+        "NDCG@10": 0.0032017537367754817,
+        "MRR": 0.003326073431665745
+      },
+      "content": {
+        "HR@10": 0.010692701069270108,
+        "NDCG@10": 0.006943338209081229,
+        "MRR": 0.006859879272663068
+      },
+      "popularity": {
+        "HR@10": 0.013482101348210134,
+        "NDCG@10": 0.006048364280109331,
+        "MRR": 0.005638074705726855
+      },
+      "trending": {
+        "HR@10": 0.007593367426003409,
+        "NDCG@10": 0.003665887365141627,
+        "MRR": 0.0037987878128820317
+      },
+      "logistic regression": {
+        "HR@10": 0.020145668681233533,
+        "NDCG@10": 0.011902506964625555,
+        "MRR": 0.011236026839352223
+      },
+      "random forest": {
+        "HR@10": 0.037346970401363706,
+        "NDCG@10": 0.02238306257380449,
+        "MRR": 0.01935915764799302
+      },
+      "gradient boosting": {
+        "HR@10": 0.0368820703548737,
+        "NDCG@10": 0.021683594771708718,
+        "MRR": 0.018597592443764462
+      },
+      "soft voting": {
+        "HR@10": 0.03610723694405703,
+        "NDCG@10": 0.02206862043401186,
+        "MRR": 0.019388724109326027
+      }
+    },
+    "importance": {
+      "recipe_age": 0.15711559517055507,
+      "svd_z": 0.07563784517798092,
+      "content_z": 0.07063243156371224,
+      "svd": 0.054715114876478475,
+      "content": 0.052017050403282784,
+      "trending_z": 0.05112958481813295,
+      "sugar_gap": 0.04519244358394495,
+      "kcal_gap": 0.04447481246261443,
+      "shares_gap": 0.03850631225668031,
+      "popularity": 0.03849321728856649
+    }
+  },
+  "meal_plan": {
+    "target": {
+      "bmr": 1673.75,
+      "kcal": 2301.40625,
+      "protein": 115.0703125,
+      "carbs": 287.67578125,
+      "fat": 76.71354166666667
+    },
+    "max_gap": 0.051015004413062615,
+    "unique": 28,
+    "meals": 28
+  }
+}
